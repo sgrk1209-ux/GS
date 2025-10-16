@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Gayathri 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+    }
+    .card {
+      width: 90%;
+      max-width: 400px;
+      height: 550px;
+      perspective: 1000px;
+      position: relative;
+      cursor: pointer;
+    }
+    .page {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      backface-visibility: hidden;
+      transform: rotateY(0deg);
+      transition: transform 1s;
+    }
+    .page.active {
+      transform: rotateY(0deg);
+    }
+    .page.inactive {
+      transform: rotateY(180deg);
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    .flower {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: pink;
+      border-radius: 50%;
+      animation: float 4s ease-in-out infinite;
+    }
+    .flower1 { top: 10%; left: 10%; }
+    .flower2 { top: 20%; right: 15%; }
+    .flower3 { bottom: 15%; left: 30%; }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: heartFloat 3s linear infinite;
+    }
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+    .heart::before { top: -10px; left: 0; }
+    .heart::after { left: 10px; top: 0; }
+    @keyframes heartFloat {
